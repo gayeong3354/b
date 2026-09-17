@@ -6,7 +6,7 @@
 <title>❤️</title>
 
 <style>
-html, body{
+html,body{
     width:100%;
     height:100%;
     margin:0;
@@ -16,64 +16,92 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(180deg,#fff9fb,#ffeef5);
-    font-family:'Malgun Gothic', sans-serif;
+    background:#000;
     overflow:hidden;
+    font-family:"Malgun Gothic",sans-serif;
+    animation:bright 2s forwards;
+    animation-delay:1s;
 }
 
 .container{
     text-align:center;
-    animation:fadeIn 2s ease;
 }
 
 .name{
-    font-size:34pt;
+    font-size:36pt;
     font-weight:bold;
-    color:#000000;
-    margin-bottom:25px;
+    color:black;
+    opacity:0;
+    animation:showName 1.5s forwards;
+    animation-delay:2s;
 }
 
 .question{
-    font-size:34pt;
+    font-size:30pt;
     font-weight:bold;
     color:#e6004c;
-    line-height:1.5;
-    text-shadow:2px 2px 8px rgba(255,105,180,0.35);
+    margin-top:30px;
+    opacity:0;
+    text-shadow:0 0 15px rgba(255,105,180,.4);
+    animation:showQuestion 1.5s forwards;
+    animation-delay:4s;
 }
 
 .heart{
-    color:#ff2d55;
     animation:beat 1s infinite;
+    display:inline-block;
 }
 
-@keyframes beat{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.25);}
-    100%{transform:scale(1);}
+@keyframes bright{
+    from{
+        background:#000;
+    }
+    to{
+        background:#fff7fb;
+    }
 }
 
-@keyframes fadeIn{
+@keyframes showName{
     from{
         opacity:0;
-        transform:translateY(30px);
+        transform:translateY(20px);
     }
     to{
         opacity:1;
         transform:translateY(0);
     }
 }
-</style>
 
+@keyframes showQuestion{
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
-    <div class="name">상빈아,</div>
-    <div class="question">
-        ❤️나랑 결혼해줄래?❤️
+    <div class="name">
+        상빈아!
     </div>
-</div>
+
+    <div class="question">
+        <span class="heart">❤️</span>
+        나랑 결혼해줄래?
+        <span class="heart">❤️</span>
+    </div>
 </div>
 
 </body>
