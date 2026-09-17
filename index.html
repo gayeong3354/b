@@ -3,25 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>😊</title>
+<title>❤️</title>
+
 <style>
-html,body{
-height:100%;
-margin:0;
+html, body{
+    width:100%;
+    height:100%;
+    margin:0;
 }
+
 body{
-display:flex;
-justify-content:center;
-align-items:center;
-background:#ffffff;
-font-family:Arial,sans-serif;
-font-size:40px;
-font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#fff9fb,#ffeef5);
+    font-family:'Malgun Gothic', sans-serif;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    animation:fadeIn 2s ease;
+}
+
+.name{
+    font-size:34pt;
+    font-weight:bold;
+    color:#ff5c8a;
+    margin-bottom:25px;
+}
+
+.question{
+    font-size:40pt;
+    font-weight:bold;
+    color:#e6004c;
+    line-height:1.5;
+    text-shadow:2px 2px 8px rgba(255,105,180,0.35);
+}
+
+.heart{
+    color:#ff2d55;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.25);}
+    100%{transform:scale(1);}
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 </style>
+
 </head>
+
 <body>
-  상빈아,<br>
-  ❤️나랑결혼해줄래?❤️
+
+<div class="container">
+    <div class="name">용용아,</div>
+
+    <div class="question">
+        <span class="heart">❤️</span><br>
+        나랑 결혼해줄래?<br>
+        <span class="heart">❤️</span>
+    </div>
+</div>
+
 </body>
 </html>
